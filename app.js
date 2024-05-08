@@ -16,6 +16,11 @@ connectToDatabase()
   .then(() => {
     console.log("Connected to MongoDB");
 
+    app.get('/', (req, res) => {
+      res.send('Welcome to Abel Udoh`s Blogging API!');
+  });
+  
+
     // User routes
     app.use('/users', authRoutes);
     app.use('/blogs', blogRoutes);
