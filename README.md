@@ -14,7 +14,7 @@ Sign In: To sign in to your account, send a POST request to https://abeludoh-blo
 
 Blog Management
 
-Create a Blog: To create a new blog post, send a POST request to https://abeludoh-blogging-api.onrender.com/blogs with your blog content in the request body. Include the token received during sign-up or sign-in in the Authorization header as a Bearer token.
+Create a Blog: To create a new blog post, send a POST request to https://abeludoh-blogging-api.onrender.com/blogs with your blog content in the request body. Include the token received during sign-in in the Authorization header as a Bearer token.
 
 Update a Blog: To update an existing blog post, send a PUT request to https://abeludoh-blogging-api.onrender.com/blogs/:id with the blog ID in the URL and the updated content in the request body. Include the token in the Authorization header.
 
