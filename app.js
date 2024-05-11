@@ -17,7 +17,7 @@ connectToDatabase()
     console.log("Connected to MongoDB");
 
     app.get('/', (req, res) => {
-      res.send('Welcome to Abel Udoh`s Blogging API!');
+      res.send('Welcome to Udeme Udo`s Blogging API');
   });
   
 
