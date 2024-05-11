@@ -16,7 +16,7 @@ describe('Blog Endpoints', () => {
             useCreateIndex: true
         });
 
-        const user = await User.create({ firstName: 'Abel', lastName: 'Udoh', email: 'abeludoh8@gmail.com', password: 'password' });
+        const user = await User.create({ firstName: 'udeme', lastName: 'Udo', email: 'udemeinwang@gmail.com', password: 'password' });
         token = jwt.sign({ userId: user._id }, process.env.JWT_SECRET, { expiresIn: '1h' });
     });
 

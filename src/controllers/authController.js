@@ -33,6 +33,7 @@ const signIn = async (req, res) => {
         }
         const token = jwt.sign({ userId: user._id }, process.env.JWT_SECRET, { expiresIn: '1h' });
         res.status(200).json({ token });
+        console.log(JWT_SECRET)
     } catch (error) {
         console.error("Error signing in user:", error);
         res.status(500).json({ message: "Internal server error" });

@@ -26,16 +26,16 @@ describe('Authentication Endpoints', () => {
     it('should sign up a new user', async () => {
         const response = await request(app)
             .post('/signup')
-            .send({ firstName: 'Abel', lastName: 'Udoh', email: 'abeludoh8@gmail.com', password: 'password' });
+            .send({ firstName: 'udeme', lastName: 'udo', email: 'udemeinwang@gmail.com', password: 'password' });
         expect(response.status).toBe(201);
     });
 
     it('should sign in a user', async () => {
         const password = await bcrypt.hash('password', 10);
-        await User.create({ firstName: 'Abel', lastName: 'Udoh', email: 'abeludoh8@gmail.com', password });
+        await User.create({ firstName: 'udeme', lastName: 'udo', email: 'udemeinwang@gmail.com', password });
         const response = await request(app)
             .post('/signin')
-            .send({ email: 'abeludoh8@gmail.com', password: 'password' });
+            .send({ email: 'udemeinwang@gmail.com', password: 'password' });
         expect(response.status).toBe(200);
         expect(response.body).toHaveProperty('token');
     });
@@ -43,7 +43,7 @@ describe('Authentication Endpoints', () => {
     it('should not sign in an invalid user', async () => {
         const response = await request(app)
             .post('/signin')
-            .send({ email: 'abeludoh8@gmail.com', password: 'invalidpassword' });
+            .send({ email: 'udemeinwang@gmail.com', password: 'invalidpassword' });
         expect(response.status).toBe(401);
     });
 });
